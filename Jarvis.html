@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechJ.A.R.V.I.S</title>
+
+    <!-- Css Linkage -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .main {
+            min-height: 100vh;
+            position: relative;
+            width: 100%;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main .image-container {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .main .image-container img {
+            width: 500px;
+            border-radius: 50%;
+        }
+
+        .main h1 {
+            color: #00bcd4;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        .main p {
+            color: #324042;
+            text-align: center;
+            margin-bottom:30px;
+        }
+
+        .main .input{
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            width: 50vw;
+            height: 50px;
+            border-radius: 30px;
+            background: rgba(202 253 255 / 50%);
+        }
+
+        .main .input .talk{
+            background: transparent;
+            outline: none;
+            border: none;
+            width: 140px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .main .input .talk i{
+            font-size: 20px;
+            color: #aed0d0;
+        }
+
+        .main .input .content{
+            color: #aed0d0;
+            font-size: 30px;
+            margin-right: 40px;
+        }
+
+        /* Added conversation styling */
+        #conversation {
+            max-width: 60vw;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #212121;
+            border-radius: 10px;
+            overflow-y: auto;
+            max-height: 200px;
+            color: #fff;
+        }
+
+        #conversation div {
+            margin-bottom: 10px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <section class="main">
+        <div class="image-container">
+            <img src="pic.gif" alt="image">
+        </div>
+        <div>
+            <h1>J.A.R.V.I.S</h1>
+            <p>I' am your Virtual Assistant. How can I help you?</p>
+        </div>
+        <div class="input">
+            <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+            <h1 class="content">click here to start speaking</h1>
+        </div>
+
+        <!-- Conversation display -->
+        <div id="conversation"></div>
+    </section>
+
+    <!-- Js Linkage -->
+    <script src="./jarvis.js"></script>
+    <noscript>you need javascript for this web app</noscript>
+</body>
+</html>
